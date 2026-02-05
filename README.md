@@ -64,5 +64,10 @@
 ### 1988
 + Survey Paper - Time Window Constrained Routing and Scheduling Problems, [Transportation Science](https://doi.org/10.1287/trsc.22.1.1)
 
+
+### 1964
++ Scheduling of Vehicles from a Central Depot to a Number of Delivery Points, [Operations Research](http://dx.doi.org/10.1287/opre.12.4.568)
+
+
 ### 1959
 + The Truck Dispatching Problem, [Management Science](https://www.jstor.org/stable/2627477)
