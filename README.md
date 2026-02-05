@@ -45,6 +45,7 @@
 
 
 ### 2015
++ Arc Routing: Problems, Methods, and Applications, [Book](https://doi.org/10.1137/1.9781611973679)
 + Operational Transportation Planning of Modern Freight Forwarding Companies: Vehicle Routing under Consideration of Subcontracting and Request Exchange, [Book](https://doi.org/10.1007/978-3-658-06869-1)
 
 
