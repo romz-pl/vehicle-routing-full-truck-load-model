@@ -77,6 +77,14 @@ The goal of every business strategy is to create value. In the context of the ve
 This schedule determines which driver will take which orders. However, since there are many business strategies, there are also many ways to generate a work schedule. 
 Therefore, designing a flexible mathematical model that encompasses the broad spectrum of possible business strategies is crucial.
 
+The business strategy for the vehicle routing problem depends heavily on the time horizon and geographic area. 
+For example, consider a company that delivers goods within Poland, where each driver returns to the base every day. 
+Another example is a company that operates throughout Europe, where drivers return to the base every Friday or every other week. 
+Both examples are realistic.
+
+
+
+
 
 ## References
 
