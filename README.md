@@ -21,7 +21,7 @@
 > Wikipedia: [Truckload shipping](https://en.wikipedia.org/wiki/Truckload_shipping)
 
 
-## Mathematical model based on directed graph
+## Mathematical Model Based on Directed Graph
 
 The Full Truck Load (FTL) model uses a directed graph $G = (N, A)$ to represent the transportation network as a set of nodes $N$, 
 which represent locations such as origins, destinations, and hubs, and a set of directed arcs $A$, 
@@ -30,16 +30,20 @@ asymmetric, and time-dependent constraints often present in FTL operations, such
 
 ### Core Components of the Directed Graph 
 + **Nodes**, $N$: Represent geographic locations including pick-up points, delivery points, depots, and artificial source/sink nodes $N_{0}$, $N_{\infty}$ to represent the start and end of a vehicle's tour.
-
 + **Arcs**, $A$: Represent the paths between locations. In a directed graph, the arc $i \rightarrow j$ is distinct from $j\rightarrow i$, allowing for one-way roads or different travel times/costs in opposite directions.
-
 + **Weights**: Arcs are typically weighted with costs (distance, fuel, tolls) and travel times. 
-
 + **Arc Types**:
   + **Service Arcs**: Represent loaded, revenue-generating trips.
   + **Empty Travel Arcs**: Represent repositioning of empty trucks to the next pick-up point.
   + **Waiting Arcs**: Represent trucks waiting at a node to meet time window constraints.
- 
+
+
+### Key Features of FTL Modeling on Directed Graphs
+
++ **Time-Space Representation**: The graph often incorporates time as a dimension, creating a "time-expanded graph." In this type of graph, nodes are defined as $(location, time)$, enabling the modeling of time-dependent constraints such as delivery windows.
++ **Full Truck Load Constraint**: Since each truck is loaded to capacity, the model typically involves pairing a specific pickup node with a specific delivery node and treating it as direct service.
++ **Objective Function**: The goal is usually to reduce total costs, which includes operating costs (distance-based) and waiting/empty travel costs.
++ **Solution Approach**: These problems are often NP-hard and are solved using metaheuristics to manage large-scale networks. The focus is on generating efficient routes and assigning trucks.
 
 
 ## References
