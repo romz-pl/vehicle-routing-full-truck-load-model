@@ -57,5 +57,10 @@
 + The Vehicle Routing Problem: Latest Advances and New Challenges, [Book](https://doi.org/10.1007/978-0-387-77778-8)
 
 
+### 2002
++ Vehicle Routing: Problems, Methods, and Applications, [Book, 1st Edition](https://doi.org/10.1137/1.9780898718515)
+
+
+
 ### 1959
 + The Truck Dispatching Problem, [Management Science](https://www.jstor.org/stable/2627477)
