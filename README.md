@@ -28,6 +28,19 @@ which represent locations such as origins, destinations, and hubs, and a set of 
 which represent permitted travel routes, empty repositioning, and waiting actions. This framework allows for the modeling of complex, 
 asymmetric, and time-dependent constraints often present in FTL operations, such as driver hours of service, time windows, and vehicle capacity.
 
+### Core Components of the Directed Graph 
++ **Nodes**, $N$: Represent geographic locations including pick-up points, delivery points, depots, and artificial source/sink nodes $N_{0}$, $N_{\infty}$ to represent the start and end of a vehicle's tour.
+
++ **Arcs**, $A$: Represent the paths between locations. In a directed graph, the arc $i \rightarrow j$ is distinct from $j\rightarrow i$, allowing for one-way roads or different travel times/costs in opposite directions.
+
++ **Weights**: Arcs are typically weighted with costs (distance, fuel, tolls) and travel times. 
+
++ **Arc Types**:
+  + **Service Arcs**: Represent loaded, revenue-generating trips.
+  + **Empty Travel Arcs**: Represent repositioning of empty trucks to the next pick-up point.
+  + **Waiting Arcs**: Represent trucks waiting at a node to meet time window constraints.
+ 
+
 
 ## References
 
