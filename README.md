@@ -80,7 +80,14 @@ Therefore, designing a flexible mathematical model that encompasses the broad sp
 The business strategy for the vehicle routing problem depends heavily on the time horizon and geographic area. 
 For example, consider a company that delivers goods within Poland, where each driver returns to the base every day. 
 Another example is a company that operates throughout Europe, where drivers return to the base every Friday or every other week. 
-Both examples are realistic.
+Both examples are realistic. With these two examples, the business question is: **"What is the optimal schedule for the company?"**.
+The answer to this question is critical to providing the right mathematical model, and consequently, the proper software implementation.
+
+More specifically, consider the following business case: A company operates throughout Europe and requires its drivers to return to the base every Friday.
+For the one-week horizon, it is reasonable to assume that new orders will appear while the driver is on the route. 
+With this in mind, what strategy should the business choose? 
+Should it provide the complete list of orders for each driver for the next five days, or is it more optimal to provide only the next order?
+Or perhaps the subsequent two orders for any driver in the company are even more optimal?
 
 
 
