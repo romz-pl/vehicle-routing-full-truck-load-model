@@ -1,4 +1,4 @@
-# Model for solving Full Truck Load problem based on the directed graph
+# Full Truck Load problem based on the directed graph
 
 > [!NOTE]
 > The **vehicle routing problem (VRP)** is a combinatorial optimization and integer programming problem which asks
