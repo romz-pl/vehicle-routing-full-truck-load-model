@@ -24,7 +24,12 @@
 ## References
 
 ### 2023
-+ The Evolution of the Vehicle Routing Problem: A Survey of VRP Research and Practice from 2005 to 2022, [In: The Evolution of the Vehicle Routing Problem](https://doi.org/10.1007/978-3-031-18716-2_1)
++ The Evolution of the Vehicle Routing Problem: A Survey of VRP Research and Practice from 2005 to 2022, [Chapter in: The Evolution of the Vehicle Routing Problem](https://doi.org/10.1007/978-3-031-18716-2_1)
+
+
+### 2019
++ Orienteering Problems: Models and Algorithms for Vehicle Routing Problems with Profits, [Textbook](https://doi.org/10.1007/978-3-030-29746-6)
+
 
 ### 1959
 + The Truck Dispatching Problem, [Management Science](https://www.jstor.org/stable/2627477)
