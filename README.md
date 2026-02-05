@@ -1,4 +1,4 @@
-# Full Truck Load problem based on the directed graph
+# Full Truck Load Model Based on the Directed Graph Representation
 
 > [!NOTE]
 > The **vehicle routing problem (VRP)** is a combinatorial optimization and integer programming problem which asks
@@ -14,11 +14,19 @@
 
 
 > [!NOTE]
-> **Full Truck Load shipping** is freight transport in which a semi-trailer or intermodal container is filled entirely
+> **Full Truck Load (FTL) shipping** is freight transport in which a semi-trailer or intermodal container is filled entirely
 > with one type of cargo. It differs from less-than-truckload shipping (LTL) in which freight from multiple
 > customers is combined in one trailer. A truckload carrier is a trucking company that contracts entire trailer-load to a single customer.
 >
 > Wikipedia: [Truckload shipping](https://en.wikipedia.org/wiki/Truckload_shipping)
+
+
+## Mathematical model
+
+The Full Truck Load (FTL) model uses a directed graph $G = (N, A)$ to represent the transportation network as a set of nodes $N$, 
+which represent locations such as origins, destinations, and hubs, and a set of directed arcs $A$, 
+which represent permitted travel routes, empty repositioning, and waiting actions. This framework allows for the modeling of complex, 
+asymmetric, and time-dependent constraints often present in FTL operations, such as driver hours of service, time windows, and vehicle capacity.
 
 
 ## References
