@@ -44,5 +44,9 @@
 + Metaheuristics for Vehicle Routing Problems, [Book](https://doi.org/10.1002/9781119136767)
 
 
+### 2015
++ Operational Transportation Planning of Modern Freight Forwarding Companies: Vehicle Routing under Consideration of Subcontracting and Request Exchange, [Book](https://doi.org/10.1007/978-3-658-06869-1)
+
+
 ### 1959
 + The Truck Dispatching Problem, [Management Science](https://www.jstor.org/stable/2627477)
