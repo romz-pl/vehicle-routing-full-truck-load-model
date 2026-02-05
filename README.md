@@ -13,4 +13,9 @@
 > Wikipedia: [Vehicle routing problem](https://en.wikipedia.org/wiki/Vehicle_routing_problem)
 
 
-
+> [!NOTE]
+> **Full Truck Load shipping** is freight transport in which a semi-trailer or intermodal container is filled entirely
+> with one type of cargo. It differs from less-than-truckload shipping (LTL) in which freight from multiple
+> customers is combined in one trailer. A truckload carrier is a trucking company that contracts entire trailer-load to a single customer.
+>
+> Wikipedia: [Truckload shipping](https://en.wikipedia.org/wiki/Truckload_shipping)
