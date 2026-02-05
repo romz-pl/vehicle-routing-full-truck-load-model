@@ -52,6 +52,17 @@ asymmetric, and time-dependent constraints often present in FTL operations, such
 + **Data-Driven Transport Mapping**: This method is applied to analyze freight movement in specific areas, such as the Port of Hamburg, in order to predict traffic volume and optimize routing.
 
 
+### Legal regulations
++ **Drivers' labor law**: The model must take into account legal regulations concerning drivers' working hours. 
++ **Cabotage transport**: Regulations concerning [cabotage transport](https://en.wikipedia.org/wiki/Cabotage) must be taken into account in the model.
+
+These drivers' labor law regulations and cabotage transport regulations are the source of the model's complexity. 
+First of all, the working hours of drivers directly influence travel time between two points on a map.
+Therefore, in order to calculate the travel time of the track, the current status of the driver's activity must be taken into account.
+As a result, the considered directed graph is not static, but some arcs are non-static in the sense that they depend on the considered track.
+For example, the required distance to travel may be short; however, the driver is not allowed to drive. He or she must wait until the obligatory break ends.
+
+
 
 ## References
 
