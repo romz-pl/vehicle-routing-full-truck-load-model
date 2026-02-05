@@ -71,7 +71,11 @@ Since such safe places are scarce, drivers' working time is correlated with the 
 Considering this correlation could provide business value since it would allow for the opportunity to reserve a parking space.
 
 
+### Business strategy
 
+The goal of every business strategy is to create value. In the context of the vehicle routing problem, value is represented by an optimal work schedule.
+This schedule determines which driver will take which orders. However, since there are many business strategies, there are also many ways to generate a work schedule. 
+Therefore, designing a flexible mathematical model that encompasses the broad spectrum of possible business strategies is crucial.
 
 
 ## References
