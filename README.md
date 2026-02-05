@@ -1,4 +1,4 @@
-# Full Truck Load Model Based on the Directed Graph Representation
+# Full Truck Load Problem
 
 > [!NOTE]
 > The **vehicle routing problem (VRP)** is a combinatorial optimization and integer programming problem which asks
@@ -21,7 +21,7 @@
 > Wikipedia: [Truckload shipping](https://en.wikipedia.org/wiki/Truckload_shipping)
 
 
-## Mathematical model
+## Mathematical model based on directed graph
 
 The Full Truck Load (FTL) model uses a directed graph $G = (N, A)$ to represent the transportation network as a set of nodes $N$, 
 which represent locations such as origins, destinations, and hubs, and a set of directed arcs $A$, 
