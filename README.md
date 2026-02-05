@@ -48,5 +48,9 @@
 + Operational Transportation Planning of Modern Freight Forwarding Companies: Vehicle Routing under Consideration of Subcontracting and Request Exchange, [Book](https://doi.org/10.1007/978-3-658-06869-1)
 
 
+### 2014
++ Vehicle Routing: Problems, Methods, and Applications, [Book, 2nd Edition](https://doi.org/10.1137/1.9781611973594)
+
+
 ### 1959
 + The Truck Dispatching Problem, [Management Science](https://www.jstor.org/stable/2627477)
