@@ -46,6 +46,13 @@ asymmetric, and time-dependent constraints often present in FTL operations, such
 + **Solution Approach**: These problems are often NP-hard and are solved using metaheuristics to manage large-scale networks. The focus is on generating efficient routes and assigning trucks.
 
 
+### Example Applications
++ **Dynamic FTL Routing**: This is used to solve problems where orders arrive in real time. It allows for the dynamic re-routing of vehicles based on current graph states.
++ **Pattern-Based Formulation**: This is used for multi-shift FTL scenarios and utilizes graph structures to generate feasible, cost-effective routes.
++ **Data-Driven Transport Mapping**: This method is applied to analyze freight movement in specific areas, such as the Port of Hamburg, in order to predict traffic volume and optimize routing.
+
+
+
 ## References
 
 ### 2023
