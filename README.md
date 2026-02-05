@@ -53,7 +53,7 @@ asymmetric, and time-dependent constraints often present in FTL operations, such
 
 
 ### Legal regulations
-+ **Drivers' labor law**: The model must take into account legal regulations concerning drivers' working hours. 
++ **Drivers' labor law**: The model must take into account legal regulations concerning drivers' working hours, which is crucial for ensuring the safety and well-being of drivers.
 + **Cabotage transport**: Regulations concerning [cabotage transport](https://en.wikipedia.org/wiki/Cabotage) must be taken into account in the model.
 
 These drivers' labor law regulations and cabotage transport regulations are the source of the model's complexity. 
@@ -61,6 +61,16 @@ First of all, the working hours of drivers directly influence travel time betwee
 Therefore, in order to calculate the travel time of the track, the current status of the driver's activity must be taken into account.
 As a result, the considered directed graph is not static, but some arcs are non-static in the sense that they depend on the considered track.
 For example, the required distance to travel may be short; however, the driver is not allowed to drive. He or she must wait until the obligatory break ends.
+
+Additionally, the regulations regarding drivers' work hours offer an added level of flexibility.
+After careful reading of these regulations, it is clear that the driver has some flexibility in deciding when to take a break.
+With this flexibility, the travel time between two points on the map depends on the driver's decisions.
+
+However, the driver must take the brake in the parking space dedicated to the track.
+Since such safe places are scarce, drivers' working time is correlated with the availability of parking spaces.
+Considering this correlation could provide business value since it would allow for the opportunity to reserve a parking space.
+
+
 
 
 
