@@ -19,3 +19,9 @@
 > customers is combined in one trailer. A truckload carrier is a trucking company that contracts entire trailer-load to a single customer.
 >
 > Wikipedia: [Truckload shipping](https://en.wikipedia.org/wiki/Truckload_shipping)
+
+
+## References
+
+### 1959
++ The Truck Dispatching Problem, [Management Science](https://www.jstor.org/stable/2627477)
