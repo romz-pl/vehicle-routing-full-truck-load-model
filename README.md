@@ -35,8 +35,13 @@
 + Orienteering Problems: Models and Algorithms for Vehicle Routing Problems with Profits, [Book](https://doi.org/10.1007/978-3-030-29746-6)
 + Smart Delivery Systems: Solving Complex Vehicle Routing Problems, [Book](https://doi.org/10.1016/C2017-0-03660-1)
 
+
 ### 2017
 + Approximate Dynamic Programming for Dynamic Vehicle Routing, [Book](https://doi.org/10.1007/978-3-319-55511-9)
+
+
+### 2016
++ Metaheuristics for Vehicle Routing Problems, [Book](https://doi.org/10.1002/9781119136767)
 
 
 ### 1959
