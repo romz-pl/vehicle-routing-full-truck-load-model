@@ -113,6 +113,17 @@ A schedule could be interrupted for many reasons, such as driver illness, broken
 Given these possibilities, it is necessary to create a portfolio that can be fulfilled even if an interruption occurs.
 A portfolio that can withstand such circumstances is considered stable.
 
+As previously mentioned, mathematical models should incorporate the features of an order portfolio, such as value, yield, and stability.
+Consequently, systems built on these models must support decisions made by portfolio managers.
+Specifically, users should be able to evaluate the value of potential orders and how they would affect the portfolio's value and stability.
+Ideally, the system would autonomously select orders. 
+Given a set of possible orders, the system should suggest which orders to buy and which to sell.
+
+
+### Summary
+
+
+
 
 
 ## References
