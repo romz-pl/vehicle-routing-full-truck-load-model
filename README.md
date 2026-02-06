@@ -104,7 +104,7 @@ The portfolio manager can buy and sell orders.
 However, due to agreements with customers, some orders cannot be sold and must be processed by the company.
 Furthermore, the portfolio manager faces the complex task of deciding which orders to buy and which to sell.
 Thus, the business question arises: **"What is the optimal portfolio for the company?"**
-This general question can be broken down into more specific questions related to the value and stability of the portfolio.
+This general question can be broken down into more specific questions related to the **value** and **stability** of the portfolio.
 
 The value of the portfolio determines the yield obtained from order processing. 
 However, since only the schedule is guaranteed, the yield is not fixed.
