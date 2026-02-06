@@ -99,27 +99,27 @@ In such cases, the company can be characterized as an order trading entity, as b
 This creates a strong interdependence between order portfolio construction and driver schedule generation, requiring a mathematical model that can accommodate this dynamic relationship.
 
 
-### Order portfolio
 
-Every transport company has an order portfolio. In the most general case, the structure of this portfolio is highly dynamic.
-The portfolio manager can buy and sell orders. 
-However, due to agreements with customers, some orders cannot be sold and must be processed by the company.
-Furthermore, the portfolio manager faces the complex task of deciding which orders to buy and which to sell.
-Thus, the business question arises: **"What is the optimal portfolio for the company?"**
-This general question can be broken down into more specific questions related to the **value** and **stability** of the portfolio.
+### Order Portfolio
+Every transport company maintains an order portfolio. In the most general case, the structure of this portfolio is highly dynamic. 
+The portfolio manager has the authority to buy and sell orders. 
+However, contractual agreements with customers dictate that certain orders cannot be sold and must be fulfilled by the company.
+Furthermore, the portfolio manager faces the complex task of determining which orders to acquire and which to divest. 
+This gives rise to a critical business question: **"What constitutes the optimal portfolio for the company?"**.
+This overarching question can be decomposed into more specific inquiries related to the **value** and **stability** of the portfolio.
 
-The value of the portfolio determines the yield obtained from order processing. 
-However, since only the schedule is guaranteed, the yield is not fixed.
-If the schedule cannot be completed, the yield could be significantly smaller.
-A schedule could be interrupted for many reasons, such as driver illness, broken trucks, traffic jams, terrible weather conditions, and accidents on the road.
-Given these possibilities, it is necessary to create a portfolio that can be fulfilled even if an interruption occurs.
-A portfolio that can withstand such circumstances is considered stable.
+The value of the portfolio determines the revenue generated from order fulfillment. 
+However, since only the schedule is guaranteed, the revenue is not fixed. 
+If the schedule cannot be completed, the revenue could be significantly reduced. 
+A schedule may be disrupted for numerous reasons, including driver illness, vehicle breakdowns, traffic congestion, adverse weather conditions, and road accidents.
+Given these contingencies, it is essential to construct a portfolio that remains viable even when disruptions occur. 
+A portfolio capable of withstanding such circumstances is considered stable.
 
-As previously mentioned, mathematical models should incorporate the features of an order portfolio, such as value, yield, and stability.
-Consequently, systems built on these models must support decisions made by portfolio managers.
-Specifically, users should be able to evaluate the value of potential orders and how they would affect the portfolio's value and stability.
-Ideally, the system would autonomously select orders. 
-Given a set of possible orders, the system should suggest which orders to buy and which to sell.
+As previously mentioned, mathematical models should incorporate the key features of an order portfolio, such as value, revenue potential, and stability. 
+Consequently, systems built upon these models must support the decision-making processes of portfolio managers. 
+Specifically, users should be able to evaluate the value of prospective orders and assess their impact on the portfolio's overall value and stability. 
+Ideally, the system would autonomously facilitate order selection. 
+Given a set of available orders, the system should recommend which orders to acquire and which to divest.
 
 
 ### Implementation
