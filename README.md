@@ -124,22 +124,18 @@ Given a set of available orders, the system should recommend which orders to acq
 
 ### Implementation
 
-This section provides an overview of the IT system's characteristics based on the mathematical model.
-It is important to note that a significant portion of the model is dedicated to optimization problems, 
-including portfolio and schedule optimization. These problems belong to the class of 
-combinatorial problems and are nonlinear due to drivers' labor laws.
-Currently, it is unclear how to solve these problems, but approximation algorithms based 
-on metaheuristics, such as GRASP (Greedy Randomized Adaptive Search Procedures), are probably the only way to do so.
+This section provides an overview of the IT system characteristics derived from the mathematical model. 
+It is important to note that a substantial portion of the model addresses optimization problems, including portfolio and schedule optimization. 
+These problems belong to the class of combinatorial optimization and exhibit nonlinearity due to driver labor law constraints.
 
-The implementer of the system must consider that it is a real-time decision system that must 
-handle millions of orders and thousands of trucks. Due to the system's scale and the requirements 
-to provide real-time decision support, it must be designed from scratch to be implemented on a cluster of distributed machines.
-The performance requirements must be taken very seriously, and many scalability tests 
-must be conducted to ensure the system operates smoothly under various load patterns.
+The solution approach for these problems remains an open question, though approximation algorithms based on metaheuristics, 
+such as GRASP (Greedy Randomized Adaptive Search Procedures), appear to be the most viable option.
 
-Furthermore, the system must be customizable to meet the needs of different companies.
-For example, customization refers to the various business strategies of different transportation companies, 
-as well as the ability of a single company to change its strategy at any time.
+System implementers must recognize that this is a real-time decision support system required to process millions of orders and coordinate thousands of trucks. 
+Given the system's scale and the need for real-time decision-making capabilities, the architecture must be designed from the ground up for deployment on a distributed computing cluster.
+Performance requirements demand serious attention, necessitating extensive scalability testing to ensure the system maintains smooth operation under diverse load patterns. 
+Additionally, the system must support customization to accommodate the varying needs of different companies. 
+Such customization encompasses the distinct business strategies of different transportation companies, as well as the ability for individual companies to adapt their strategies dynamically over time.
 
 
 
