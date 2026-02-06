@@ -146,7 +146,7 @@ While the model itself represents a valuable contribution, the document's most s
 
 A key emphasis throughout this work is the importance of building a system that extends beyond the 
 mathematical model itself — one that encompasses and supports multiple business activities in an integrated manner. 
-Of particular note is the strong correlation identified between portfolio management decisions and schedule construction, 
+Of particular note is the **strong correlation identified between portfolio management decisions and schedule construction**, 
 highlighting the interconnected nature of these strategic choices.
 
 The proposed mathematical model employs directed graphs as its foundational framework, which constitutes one of its distinguishing technical features. 
