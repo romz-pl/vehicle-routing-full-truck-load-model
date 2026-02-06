@@ -89,11 +89,12 @@ With this in mind, what strategy should the business choose?
 Should it provide the complete list of orders for each driver for the next five days, or is it more optimal to provide only the next order?
 Or perhaps the subsequent two orders for any driver in the company are even more optimal?
 
-Having established the questions, it is evident that the schedule and the construction of portfolio of orders are highly correlated.
-In other words, if the porfolio of orders is fixed the schedule can be constructed ahead.
-When the orders are added or deleted fromm porfolio it is not obvious which strategy to choose.
-However, the most complex situalion is when the company has the influence what order to add and which order to delete from the portflion.
-In this situation the company can be treated as the trading oder comany and by bying and selling o
+Once the questions have been determined, it becomes evident that the schedule and the construction of the order portfolio are closely related.
+In other words, if the order portfolio is fixed, the schedule can be made in advance.
+However, when orders are added to or deleted from the portfolio, it is unclear which strategy to choose.
+The most complex situation occurs when the company influences which orders are added to or deleted from the portfolio.
+In this case, the company can be considered a trading order company because buying and selling orders directly affects the portfolio's structure.
+Therefore, there is a strong correlation between constructing the order portfolio and creating the schedule for drivers.
 
 
 
