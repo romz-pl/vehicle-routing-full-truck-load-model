@@ -78,7 +78,7 @@ In the context of the vehicle routing problem, this value is represented by an o
 However, since numerous business strategies exist, there are correspondingly many approaches to generating an effective work schedule. 
 Therefore, designing a flexible mathematical model that encompasses the broad spectrum of possible business strategies is essential.
 
-The business strategy for the vehicle routing problem depends heavily on both the time horizon and the geographic area of operations. 
+The business strategy for the vehicle routing problem depends heavily on both the **time horizon** and the **geographic area** of operations. 
 For example, consider a company that delivers goods within Poland, where each driver returns to the base daily. 
 In contrast, another company might operate throughout Europe, with drivers returning to the base weekly or biweekly. 
 Both scenarios are realistic and raise a critical business question: **"What is the optimal schedule for the company?"**.
