@@ -97,6 +97,21 @@ In this case, the company can be considered a trading order company because buyi
 Therefore, there is a strong correlation between constructing the order portfolio and creating the schedule for drivers.
 
 
+### Order portfolio
+
+Every transport company has an order portfolio. In the most general case, the structure of this portfolio is highly dynamic.
+The portfolio manager can buy and sell orders. 
+However, due to agreements with customers, some orders cannot be sold and must be processed by the company.
+Furthermore, the portfolio manager faces the complex task of deciding which orders to buy and which to sell.
+Thus, the business question arises: **"What is the optimal portfolio for the company?"**
+This general question can be broken down into more specific questions related to the value and stability of the portfolio.
+
+The value of the portfolio determines the yield obtained from order processing. 
+However, since only the schedule is guaranteed, the yield is not fixed.
+If the schedule cannot be completed, the yield could be significantly smaller.
+A schedule could be interrupted for many reasons, such as driver illness, broken trucks, traffic jams, terrible weather conditions, and accidents on the road.
+Given these possibilities, it is necessary to create a portfolio that can be fulfilled even if an interruption occurs.
+A portfolio that can withstand such circumstances is considered stable.
 
 
 
