@@ -120,6 +120,27 @@ Ideally, the system would autonomously select orders.
 Given a set of possible orders, the system should suggest which orders to buy and which to sell.
 
 
+### Implementation
+
+This section provides an overview of the IT system's characteristics based on the mathematical model.
+It is important to note that a significant portion of the model is dedicated to optimization problems, 
+including portfolio and schedule optimization. These problems belong to the class of 
+combinatorial problems and are nonlinear due to drivers' labor laws.
+Currently, it is unclear how to solve these problems, but approximation algorithms based 
+on metaheuristics, such as GRASP (Greedy Randomized Adaptive Search Procedures), are probably the only way to do so.
+
+The implementer of the system must consider that it is a real-time decision system that must 
+handle millions of orders and thousands of trucks. Due to the system's scale and the requirements 
+to provide real-time decision support, it must be designed from scratch to be implemented on a cluster of distributed machines.
+The performance requirements must be taken very seriously, and many scalability tests 
+must be conducted to ensure the system operates smoothly under various load patterns.
+
+Furthermore, the system must be customizable to meet the needs of different companies.
+For example, customization refers to the various business strategies of different transportation companies, 
+as well as the ability of a single company to change its strategy at any time.
+
+
+
 ### Summary
 
 This document describes the structure of a mathematical model for a full truckload shipping company.
