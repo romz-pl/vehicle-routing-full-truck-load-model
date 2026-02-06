@@ -54,8 +54,8 @@ asymmetric, and time-dependent constraints often present in FTL operations, such
 
 ### Legal Regulations
 
-+ **Drivers' labor law**: The model must account for legal regulations governing drivers' working hours, which is crucial for ensuring driver safety and well-being.
-+ **Cabotage transport**: Regulations concerning [cabotage transport](https://en.wikipedia.org/wiki/Cabotage) must be incorporated into the model.
++ **[Drivers' labor law](https://en.wikipedia.org/wiki/Drivers%27_working_hours)**: The model must account for legal regulations governing drivers' working hours, which is crucial for ensuring driver safety and well-being.
++ **[Cabotage transport](https://en.wikipedia.org/wiki/Cabotage)**: Regulations concerning cabotage transport must be incorporated into the model.
 
 These drivers' labor law and cabotage transport regulations are primary sources of the model's complexity.
 First, drivers' working hours directly influence travel time between two points on a map. 
