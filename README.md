@@ -71,30 +71,32 @@ Since such safe parking locations are scarce, drivers' working time is correlate
 Incorporating this correlation into the model could provide business value, as it would enable opportunities to reserve parking spaces in advance.
 
 
-### Business strategy
+### Business Strategy
 
-The goal of every business strategy is to create value. In the context of the vehicle routing problem, value is represented by an optimal work schedule.
-This schedule determines which driver will take which orders. However, since there are many business strategies, there are also many ways to generate a work schedule. 
-Therefore, designing a flexible mathematical model that encompasses the broad spectrum of possible business strategies is crucial.
+The goal of every business strategy is to create value. 
+In the context of the vehicle routing problem, this value is represented by an optimal work schedule that determines which driver will fulfill which orders. 
+However, since numerous business strategies exist, there are correspondingly many approaches to generating an effective work schedule. 
+Therefore, designing a flexible mathematical model that encompasses the broad spectrum of possible business strategies is essential.
 
-The business strategy for the vehicle routing problem depends heavily on the time horizon and geographic area. 
-For example, consider a company that delivers goods within Poland, where each driver returns to the base every day. 
-Another example is a company that operates throughout Europe, where drivers return to the base every Friday or every other week. 
-Both examples are realistic. With these two examples, the business question is: **"What is the optimal schedule for the company?"**.
-The answer to this question is critical to providing the right mathematical model, and consequently, the proper software implementation.
+The business strategy for the vehicle routing problem depends heavily on both the time horizon and the geographic area of operations. 
+For example, consider a company that delivers goods within Poland, where each driver returns to the base daily. 
+In contrast, another company might operate throughout Europe, with drivers returning to the base weekly or biweekly. 
+Both scenarios are realistic and raise a critical business question: **"What is the optimal schedule for the company?"**.
+The answer to this question is fundamental to developing the appropriate mathematical model and, consequently, the proper software implementation. 
 
-More specifically, consider the following business case: A company operates throughout Europe and requires its drivers to return to the base every Friday.
-For the one-week horizon, it is reasonable to assume that new orders will appear while the driver is on the route. 
-With this in mind, what strategy should the business choose? 
-Should it provide the complete list of orders for each driver for the next five days, or is it more optimal to provide only the next order?
-Or perhaps the subsequent two orders for any driver in the company are even more optimal?
+To illustrate this, consider the following business case: 
+A company operates throughout Europe and requires its drivers to return to the base every Friday. 
+Given this one-week planning horizon, it is reasonable to assume that new orders will emerge while drivers are already en route. 
+This raises a strategic dilemma: Should the business provide each driver with a complete list of orders for the entire five-day period, 
+or would it be more optimal to assign only the next order? 
+Perhaps assigning the next two orders to each driver represents an even more effective strategy.
 
-Once the questions have been determined, it becomes evident that the schedule and the construction of the order portfolio are closely related.
-In other words, if the order portfolio is fixed, the schedule can be made in advance.
-However, when orders are added to or deleted from the portfolio, it is unclear which strategy to choose.
-The most complex situation occurs when the company influences which orders are added to or deleted from the portfolio.
-In this case, the company can be considered a trading order company because buying and selling orders directly affects the portfolio's structure.
-Therefore, there is a strong correlation between constructing the order portfolio and creating the schedule for drivers.
+Once these questions have been formulated, it becomes evident that the schedule and the construction of the order portfolio are closely interrelated. 
+Specifically, if the order portfolio is fixed, the schedule can be determined in advance. 
+However, when orders are dynamically added to or removed from the portfolio, the optimal strategy becomes unclear.
+The most complex situation arises when the company actively influences which orders are added to or removed from the portfolio. 
+In such cases, the company can be characterized as an order trading entity, as buying and selling orders directly affects the portfolio's structure. 
+This creates a strong interdependence between order portfolio construction and driver schedule generation, requiring a mathematical model that can accommodate this dynamic relationship.
 
 
 ### Order portfolio
