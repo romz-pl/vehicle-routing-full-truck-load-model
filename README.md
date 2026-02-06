@@ -52,23 +52,23 @@ asymmetric, and time-dependent constraints often present in FTL operations, such
 + **Data-Driven Transport Mapping**: This method is applied to analyze freight movement in specific areas, such as the Port of Hamburg, in order to predict traffic volume and optimize routing.
 
 
-### Legal regulations
-+ **Drivers' labor law**: The model must take into account legal regulations concerning drivers' working hours, which is crucial for ensuring the safety and well-being of drivers.
-+ **Cabotage transport**: Regulations concerning [cabotage transport](https://en.wikipedia.org/wiki/Cabotage) must be taken into account in the model.
+### Legal Regulations
 
-These drivers' labor law regulations and cabotage transport regulations are the source of the model's complexity. 
-First of all, the working hours of drivers directly influence travel time between two points on a map.
-Therefore, in order to calculate the travel time of the track, the current status of the driver's activity must be taken into account.
-As a result, the considered directed graph is not static, but some arcs are non-static in the sense that they depend on the considered track.
-For example, the required distance to travel may be short; however, the driver is not allowed to drive. He or she must wait until the obligatory break ends.
++ **Drivers' labor law**: The model must account for legal regulations governing drivers' working hours, which is crucial for ensuring driver safety and well-being.
++ **Cabotage transport**: Regulations concerning [cabotage transport](https://en.wikipedia.org/wiki/Cabotage) must be incorporated into the model.
 
-Additionally, the regulations regarding drivers' work hours offer an added level of flexibility.
-After careful reading of these regulations, it is clear that the driver has some flexibility in deciding when to take a break.
-With this flexibility, the travel time between two points on the map depends on the driver's decisions.
+These drivers' labor law and cabotage transport regulations are primary sources of the model's complexity.
+First, drivers' working hours directly influence travel time between two points on a map. 
+Therefore, to calculate the travel time of a route, the current status of the driver's activity must be considered. 
+As a result, the directed graph under consideration is not static; rather, some arcs are dynamic in the sense that they depend on the specific route being examined. 
+For example, the required travel distance may be short; however, the driver may not be permitted to drive and must wait until a mandatory break period ends.
 
-However, the driver must take the brake in the parking space dedicated to the track.
-Since such safe places are scarce, drivers' working time is correlated with the availability of parking spaces.
-Considering this correlation could provide business value since it would allow for the opportunity to reserve a parking space.
+Additionally, regulations regarding drivers' working hours provide an added level of flexibility. 
+A careful reading of these regulations reveals that drivers have some discretion in deciding when to take breaks. 
+With this flexibility, travel time between two points on the map depends on the driver's decisions. 
+However, drivers must take breaks in parking spaces designated for trucks. 
+Since such safe parking locations are scarce, drivers' working time is correlated with parking space availability. 
+Incorporating this correlation into the model could provide business value, as it would enable opportunities to reserve parking spaces in advance.
 
 
 ### Business strategy
