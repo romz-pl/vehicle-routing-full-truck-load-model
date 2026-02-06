@@ -122,7 +122,12 @@ Given a set of possible orders, the system should suggest which orders to buy an
 
 ### Summary
 
-
+This document describes the structure of a mathematical model for a full truckload shipping company.
+The most valuable part of the document, however, is the business analysis of the transportation company's most important aspects.
+The importance of building a system on top of the mathematical model that encompasses and supports many business activities was emphasized.
+The correlation between decisions related to portfolio and schedule construction is significant.
+The proposed mathematical model is based on directed graphs, which is an important feature of the model.
+However, the scope of the business problems discussed is the most important aspect of this document. 
 
 
 
