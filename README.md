@@ -129,7 +129,7 @@ It is important to note that a substantial portion of the model addresses optimi
 These problems belong to the class of combinatorial optimization and exhibit nonlinearity due to driver labor law constraints.
 
 The solution approach for these problems remains an open question, though approximation algorithms based on metaheuristics, 
-such as GRASP (Greedy Randomized Adaptive Search Procedures), appear to be the most viable option.
+such as [GRASP](https://en.wikipedia.org/wiki/Greedy_randomized_adaptive_search_procedure) (Greedy Randomized Adaptive Search Procedures), appear to be the most viable option.
 
 System implementers must recognize that this is a real-time decision support system required to process millions of orders and coordinate thousands of trucks. 
 Given the system's scale and the need for real-time decision-making capabilities, the architecture must be designed from the ground up for deployment on a distributed computing cluster.
