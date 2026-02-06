@@ -141,12 +141,17 @@ Such customization encompasses the distinct business strategies of different tra
 
 ### Summary
 
-This document describes the structure of a mathematical model for a full truckload shipping company.
-The most valuable part of the document, however, is the business analysis of the transportation company's most important aspects.
-The importance of building a system on top of the mathematical model that encompasses and supports many business activities was emphasized.
-The correlation between decisions related to portfolio and schedule construction is significant.
-The proposed mathematical model is based on directed graphs, which is an important feature of the model.
-However, the scope of the business problems discussed is the most important aspect of this document. 
+This document presents the structure of a mathematical model developed for a full truckload shipping company. 
+While the model itself represents a valuable contribution, the document's most significant value lies in its comprehensive business analysis of the transportation company's critical operational aspects.
+
+A key emphasis throughout this work is the importance of building a system that extends beyond the 
+mathematical model itself — one that encompasses and supports multiple business activities in an integrated manner. 
+Of particular note is the strong correlation identified between portfolio management decisions and schedule construction, 
+highlighting the interconnected nature of these strategic choices.
+
+The proposed mathematical model employs directed graphs as its foundational framework, which constitutes one of its distinguishing technical features. 
+However, the document's primary contribution remains its thorough examination of the business problems inherent to full truckload operations,
+providing context and practical relevance to the mathematical formulation.
 
 
 
