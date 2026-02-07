@@ -138,60 +138,67 @@ Additionally, the system must support customization to accommodate the varying n
 Such customization encompasses the distinct business strategies of different transportation companies, as well as the ability for individual companies to adapt their strategies dynamically over time.
 
 
-### Algorithm description
+### Algorithm Description
 
-In the previous chapter the charachteristic of the IT system was described.
-The main mentions challenges for the IT system are: 
-(a) the readines for supporting various buisness strategies; 
-(b) performance requirements dictated by real-time response requirements.
-It could be tempting to provide for each buisness stratedy the dedicated and highly optimized algorithm solving any supported strategy.
-However, this approach requires massive investment in algorithm design, and it is evean not obvious how many such algorithms are required, since
-the number of possible strategies seems to be unlimitted. Therefore more elastich approach is required.
+In the previous chapter, the characteristics of the IT system were described. 
+The main challenges for the IT system are:
++ readiness for supporting various business strategies;
++ performance requirements dictated by real-time response constraints.
 
-To provide alastic, general solution, we use the fact that the mathematical model is based on the directed graph.
-In the following, it is decribed how the digraph is constructed.
-Some arcs in this digraph are special and represent the orders that must be taken by the transport company.
-The design of the digraph is started by the defining the arc orders, current positions of the tructs and the base locations, where the trucs must be located on the end of route. 
-Let denote the set of these arc as as set of pairs $(s_i, t_i)$, where $s_i$ and $t_i$ is the start and target of the $i$-th order, respectively.
-Then the next set of arcs are constrated from each truck to each node $s_i$ if and only if the follofing conditions are true:
-(a) the driver is able to reach $s_i$ within the specified time window;
-(b) the driver is able to reach $t_i$ within the specified time window;
-(c) the driver is able to reach its own base within the specified time window;
-Taking the case of comany distributing the goods over Europe, it is sure that only small percentige of the orders fulfills these three condition for the specific truck.
-Hence, the number of arcs pointing out from the truck is much less the the total number of orders.
+It could be tempting to provide a dedicated and highly optimized algorithm for each business strategy. 
+However, this approach requires massive investment in algorithm design, and it is not even obvious how many such algorithms are required, 
+since the number of possible strategies appears to be unlimited. 
+Therefore, a more elastic approach is required.
 
-Analogous analysis can be performed, when the strategy is to provide two orders in adwance for the driver.
-Let us assume that the driver is executing the order $i$ now. 
-Then the arc between $t_i$ and the $s_j$ in the digraph is created if and only if the follofing two conditions are true:
-(a) the driver is able to reach $s_j$ with the specified time window;
-(b) the driver is able to reach $t_j$ with the specified time window;
-Then the arc between $t_j$ and the $s_k$ in the digraph is created if and only if the follofing three conditions are true:
-(a) the driver is able to reach $s_k$ with the specified time window;
-(b) the driver is able to reach $t_k$ with the specified time window;
-(c) the driver is able to reach its own base with the specified time window;
-In this way we construct the arc in the digraph only if the driver is able to reach start and target points of order within the specific time windows,
-and additionally the drived must be able to return to its own base within the specific time window.
+To provide an elastic, general solution, we exploit the fact that the mathematical model is based on a directed graph. 
+In the following sections, we describe how the digraph is constructed.
 
-So constructed digraph has some peciuliar characteristics.
-First, the digraph depends on the considered truck, since the presece of arc of digraph depends on the truck position.
-Second, the the digraph depends on the order in witch the trucks are considered, since the order must be executed by no more then one truck.
+Some arcs in this digraph are special and represent the orders that must be fulfilled by the transport company. 
+The design of the digraph begins by defining the order arcs, current positions of the trucks, and the base locations where the trucks must be positioned at the end of their routes.
 
-Having consider the construction of arcs in the graph, it is clear that the number of outgoing args from node $t_i$ is much less then the total number of orders in the porfolio.
-It must be streessed that the number of outgoing arcs from the node $t_i$ can be further decreased by imposing arbitrary constraint, like the maximum distance traveled without cargo.
+Let us denote the set of these arcs as a set of pairs $(s_i, t_i)$, where $s_i$ and $t_i$ are the start and target locations of the $i$-th order, respectively.
 
-The above description is the very general algorithm for routes generation that can acomplish very broad class of buisness startegies.
-It must be stressed that the generated routes always fulfills any constrains like drivers laber law, cabotage regulations or parking places for trucks.
-Hence, the searched schedule for the truck is the set of routs fullfilling the buisness strategy.
-The set of routes are created by extensive generation of possible routes.
+The next set of arcs is constructed from each truck to each node $s_i$ if and only if the following conditions are satisfied:
++ the driver is able to reach $s_i$ within the specified time window;
++ the driver is able to reach $t_i$ within the specified time window;
++ the driver is able to reach their own base within the specified time window.
 
-The particular value of the proposed algorithm it is affiliation to be executed in parrallel on the massive scale.
-Based on the principles of GRASP (Greedy Randomized Adaptive Search Procedures) each route considered is randomised.
-Hence, selecting the set of routes on the two separated machines can be done independently.
+In the case of a company distributing goods across Europe, only a small percentage of the orders fulfill these three conditions for a specific truck. 
+Hence, the number of arcs pointing out from each truck is much less than the total number of orders.
 
-In summary, the proposed scheme of creating the routes is very broad and is able to provide optimal solution to the broad spectrum of buisness startegies.
-Whats more, the algorithm is easily paralelisable on the disributed cluster without any communication except to sending the final results.
-Therefore, that one can expect almost linear scaling of performance with increasing the number of CPUs.
+An analogous analysis can be performed when the strategy is to provide two orders in advance for the driver. 
+Let us assume that the driver is currently executing order $i$. 
+Then the arc between $t_i$ and $s_j$ in the digraph is created if and only if the following two conditions are satisfied:
++ the driver is able to reach $s_j$ within the specified time window;
++ the driver is able to reach $t_j$ within the specified time window.
 
+Subsequently, the arc between $t_j$ and $s_k$ in the digraph is created if and only if the following three conditions are satisfied:
++ the driver is able to reach $s_k$ within the specified time window;
++ the driver is able to reach $t_k$ within the specified time window;
++ the driver is able to reach their own base within the specified time window.
+
+In this manner, we construct arcs in the digraph only if the driver is able to reach the start and target points of each order within the specified time windows, 
+and additionally, the driver must be able to return to their own base within the specified time window.
+
+The digraph constructed in this way has some peculiar characteristics. 
+First, the digraph depends on the truck under consideration, since the presence of an arc depends on the truck's position. 
+Second, the digraph depends on the order in which trucks are considered, since each order must be executed by no more than one truck.
+
+Having considered the construction of arcs in the graph, it is clear that the number of outgoing arcs from node $t_i$ is much less than the total number of orders in the portfolio. 
+It must be stressed that the number of outgoing arcs from node $t_i$ can be further reduced by imposing arbitrary constraints, such as the maximum distance traveled without cargo.
+
+The above description presents a very general algorithm for route generation that can accommodate a very broad class of business strategies. 
+It must be emphasized that the generated routes always satisfy all constraints, including driver labor laws, cabotage regulations, and parking place availability for trucks. 
+Hence, the optimal schedule for each truck is defined as the set of routes fulfilling the business strategy. 
+The set of routes is created through extensive generation of possible routes.
+
+The particular value of the proposed algorithm lies in its suitability for massively parallel execution. 
+Based on the principles of GRASP (Greedy Randomized Adaptive Search Procedures), each route considered is randomized. 
+Hence, selecting the set of routes on two separate machines can be done independently.
+
+In summary, the proposed scheme for creating routes is very flexible and is able to provide optimal solutions for a broad spectrum of business strategies. 
+Furthermore, the algorithm is easily parallelizable on a distributed cluster without requiring any communication except for sending the final results. 
+Therefore, one can expect almost linear scaling of performance with an increasing number of CPUs.
 
 
 
