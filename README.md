@@ -138,26 +138,60 @@ Additionally, the system must support customization to accommodate the varying n
 Such customization encompasses the distinct business strategies of different transportation companies, as well as the ability for individual companies to adapt their strategies dynamically over time.
 
 
-### Possible algorithms
+### Algorithm description
 
-In the previous the charachteristic of the IT system was described.
-The main challenge is: 
+In the previous chapter the charachteristic of the IT system was described.
+The main mentions challenges for the IT system are: 
 (a) the readines for supporting various buisness strategies; 
 (b) performance requirements dictated by real-time response requirements.
-It could be tempting to provide for each statedy the dedicated and highly optimized algorithm solving any supported stratedy.
-However, this approach requires massive investment in algorithm design and it is evean not obvious how many such algorithms are required, since
+It could be tempting to provide for each buisness stratedy the dedicated and highly optimized algorithm solving any supported strategy.
+However, this approach requires massive investment in algorithm design, and it is evean not obvious how many such algorithms are required, since
 the number of possible strategies seems to be unlimitted. Therefore more elastich approach is required.
 
-At this point, we use the fact that the mathematical model is based on the directed graph.
-Some arc in this digraph are special and represent the orders that must be taken by the transport company.
-The design of the digraph is started by the defining the arc orders, current positions of the tructs and the base locations $b_j$, where the trucs must be located on the end of route. 
-Let denote the set of these arc as as set of pars $(s_i, t_i)$, where $s_i$ and $t_i$ is the start and target of the $it$ order, respectively.
-Then the next set of arcs are constrated from each truc to each $s_i$ node if and only if the follofing conditions are true:
-(a) the driver is able to reach $s_i$ with the specified time window;
-(b) the driver is able to reach $t_i$ with the specified time window;
-(c) the driver is able to reach $b_j$ with the specified time window;
-Taking the cases of comany distributing the googd othe Europe, it is sure that only small percentige of the orders fulfills these thre condition for the specific truck.
-Hence the number of arcs pointing out from the truck is much less the the total number of orders.
+To provide alastic, general solution, we use the fact that the mathematical model is based on the directed graph.
+In the following, it is decribed how the digraph is constructed.
+Some arcs in this digraph are special and represent the orders that must be taken by the transport company.
+The design of the digraph is started by the defining the arc orders, current positions of the tructs and the base locations, where the trucs must be located on the end of route. 
+Let denote the set of these arc as as set of pairs $(s_i, t_i)$, where $s_i$ and $t_i$ is the start and target of the $i$-th order, respectively.
+Then the next set of arcs are constrated from each truck to each node $s_i$ if and only if the follofing conditions are true:
+(a) the driver is able to reach $s_i$ within the specified time window;
+(b) the driver is able to reach $t_i$ within the specified time window;
+(c) the driver is able to reach its own base within the specified time window;
+Taking the case of comany distributing the goods over Europe, it is sure that only small percentige of the orders fulfills these three condition for the specific truck.
+Hence, the number of arcs pointing out from the truck is much less the the total number of orders.
+
+Analogous analysis can be performed, when the strategy is to provide two orders in adwance for the driver.
+Let us assume that the driver is executing the order $i$ now. 
+Then the arc between $t_i$ and the $s_j$ in the digraph is created if and only if the follofing two conditions are true:
+(a) the driver is able to reach $s_j$ with the specified time window;
+(b) the driver is able to reach $t_j$ with the specified time window;
+Then the arc between $t_j$ and the $s_k$ in the digraph is created if and only if the follofing three conditions are true:
+(a) the driver is able to reach $s_k$ with the specified time window;
+(b) the driver is able to reach $t_k$ with the specified time window;
+(c) the driver is able to reach its own base with the specified time window;
+In this way we construct the arc in the digraph only if the driver is able to reach start and target points of order within the specific time windows,
+and additionally the drived must be able to return to its own base within the specific time window.
+
+So constructed digraph has some peciuliar characteristics.
+First, the digraph depends on the considered truck, since the presece of arc of digraph depends on the truck position.
+Second, the the digraph depends on the order in witch the trucks are considered, since the order must be executed by no more then one truck.
+
+Having consider the construction of arcs in the graph, it is clear that the number of outgoing args from node $t_i$ is much less then the total number of orders in the porfolio.
+It must be streessed that the number of outgoing arcs from the node $t_i$ can be further decreased by imposing arbitrary constraint, like the maximum distance traveled without cargo.
+
+The above description is the very general algorithm for routes generation that can acomplish very broad class of buisness startegies.
+It must be stressed that the generated routes always fulfills any constrains like drivers laber law, cabotage regulations or parking places for trucks.
+Hence, the searched schedule for the truck is the set of routs fullfilling the buisness strategy.
+The set of routes are created by extensive generation of possible routes.
+
+The particular value of the proposed algorithm it is affiliation to be executed in parrallel on the massive scale.
+Based on the principles of GRASP (Greedy Randomized Adaptive Search Procedures) each route considered is randomised.
+Hence, selecting the set of routes on the two separated machines can be done independently.
+
+In summary, the proposed scheme of creating the routes is very broad and is able to provide optimal solution to the broad spectrum of buisness startegies.
+Whats more, the algorithm is easily paralelisable on the disributed cluster without any communication except to sending the final results.
+Therefore, that one can expect almost linear scaling of performance with increasing the number of CPUs.
+
 
 
 
