@@ -122,7 +122,7 @@ Ideally, the system would autonomously facilitate order selection.
 Given a set of available orders, the system should recommend which orders to acquire and which to divest.
 
 
-### Implementation
+### IT System requirements
 
 This section provides an overview of the IT system characteristics derived from the mathematical model. 
 It is important to note that a substantial portion of the model addresses optimization problems, including portfolio and schedule optimization. 
@@ -136,6 +136,28 @@ Given the system's scale and the need for real-time decision-making capabilities
 Performance requirements demand serious attention, necessitating extensive scalability testing to ensure the system maintains smooth operation under diverse load patterns. 
 Additionally, the system must support customization to accommodate the varying needs of different companies. 
 Such customization encompasses the distinct business strategies of different transportation companies, as well as the ability for individual companies to adapt their strategies dynamically over time.
+
+
+### Possible algorithms
+
+In the previous the charachteristic of the IT system was described.
+The main challenge is: 
+(a) the readines for supporting various buisness strategies; 
+(b) performance requirements dictated by real-time response requirements.
+It could be tempting to provide for each statedy the dedicated and highly optimized algorithm solving any supported stratedy.
+However, this approach requires massive investment in algorithm design and it is evean not obvious how many such algorithms are required, since
+the number of possible strategies seems to be unlimitted. Therefore more elastich approach is required.
+
+At this point, we use the fact that the mathematical model is based on the directed graph.
+Some arc in this digraph are special and represent the orders that must be taken by the transport company.
+The design of the digraph is started by the defining the arc orders, current positions of the tructs and the base locations $b_j$, where the trucs must be located on the end of route. 
+Let denote the set of these arc as as set of pars $(s_i, t_i)$, where $s_i$ and $t_i$ is the start and target of the $it$ order, respectively.
+Then the next set of arcs are constrated from each truc to each $s_i$ node if and only if the follofing conditions are true:
+(a) the driver is able to reach $s_i$ with the specified time window;
+(b) the driver is able to reach $t_i$ with the specified time window;
+(c) the driver is able to reach $b_j$ with the specified time window;
+Taking the cases of comany distributing the googd othe Europe, it is sure that only small percentige of the orders fulfills these thre condition for the specific truck.
+Hence the number of arcs pointing out from the truck is much less the the total number of orders.
 
 
 
