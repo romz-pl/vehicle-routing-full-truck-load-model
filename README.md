@@ -200,7 +200,18 @@ In summary, the proposed scheme for creating routes is very flexible and is able
 Furthermore, the algorithm is easily parallelizable on a distributed cluster without requiring any communication except for sending the final results. 
 Therefore, one can expect almost linear scaling of performance with an increasing number of CPUs.
 
+### Cost of the algorith
 
+The main cost of the algorithm is creation of arcs in the digraph, since it requires the calculation of the route on the Europe map.
+Finding the shortest route for passenger car on the Europe map is not an easy job.
+The complexity increases significantly when one must find the route for the truck.
+In this case all temporary and permanent truck traffic bans must to be taken into account.
+Furthermore, some transport companies have internal regulation which road can be used by driver to reduce road tolls for cars.
+The complexity can be even more higher when the personal drivers preferences must be taken into account.
+Finaly, the extensive cost of the arc creations is also increased by fullfilling the requirements related to drivers law and cabotage. 
+Having found the route the travel time must be calculated as well, and it must be checked of the arrival time is withinh specified time window.
+Because of drivers law and sparsenes of parking places, in some cases there can be more then one possible way to reach the destination point.
+This route flexibility is the additionl freedom factor in the scheduling problem.
 
 ### Summary
 
